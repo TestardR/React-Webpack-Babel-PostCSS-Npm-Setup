@@ -1,11 +1,10 @@
-import React from 'react'
-    ;
+import React from 'react';
 import { AnotherDummy } from './index';
 
 const Dummy = () => {
     return (
         <div>
-            I am a dummy too !
+            I am a dummy !
             <AnotherDummy />
         </div>
     )

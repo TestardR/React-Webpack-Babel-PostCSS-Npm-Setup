@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import './styles/Dummy.scss'
 
 const AnotherDummy = () => {
     return (
-        <div>
+        <div className="dummy_title">
             I am another dummy
         </div>
     )
