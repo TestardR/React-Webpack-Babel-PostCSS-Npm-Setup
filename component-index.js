@@ -5,4 +5,6 @@
  * You are not a salmon.
  */
 
-export {components};
+export { components };
+import Dummy from "./src/components/dummy/Dummy";
+export { Dummy };
