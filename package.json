@@ -7,7 +7,8 @@
   "scripts": {
     "start": "webpack-dev-server --open --config webpack.dev.js",
     "build": "webpack --open --config webpack.lib.js",
-    "lib": "rm -rf lib && NODE_ENV=production babel src/components --out-dir lib --copy-files"
+    "lib": "rm -rf lib && NODE_ENV=production babel src/components --out-dir lib --copy-files",
+    "skindex": "node ./scripts/skindex.js"
   },
   "devDependencies": {
     "@babel/cli": "^7.7.5",
