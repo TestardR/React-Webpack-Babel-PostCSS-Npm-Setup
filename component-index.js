@@ -5,6 +5,6 @@
  * You are not a salmon.
  */
 
-export { components };
-import Dummy from "./src/components/dummy/Dummy";
-export { Dummy };
+export { default as Dummy } from "./src/components/dummy/Dummy";
+export { default as AnotherDummy } from "./src/components/dummy/Dummy";
+export { default as Test } from "./src/components/test/Test";

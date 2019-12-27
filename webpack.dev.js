@@ -1,7 +1,9 @@
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin/dist/clean-webpack-plugin");
+const {
+  CleanWebpackPlugin
+} = require("clean-webpack-plugin/dist/clean-webpack-plugin");
 
 module.exports = {
   entry: ["react-hot-loader/patch", "./src/index.js"],
@@ -99,6 +101,10 @@ module.exports = {
   ],
   devtool: "source-map",
   devServer: {
+    port: 3000,
+    overlay: {
+      errors: true
+    },
     stats: {
       chunks: false
     }
