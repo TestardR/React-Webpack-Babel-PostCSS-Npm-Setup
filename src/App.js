@@ -1,7 +1,7 @@
 import React from 'react'
-import { Dummy } from '../lib';
+import Dummy from './components/dummy/Dummy'
 
-const index = () => {
+const App = () => {
     return (
         <div>
             <Dummy />
@@ -9,4 +9,4 @@ const index = () => {
     )
 }
 
-export default index
+export default App

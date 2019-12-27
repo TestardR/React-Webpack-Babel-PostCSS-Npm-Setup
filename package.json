@@ -1,14 +1,13 @@
 {
-  "name": "my_react_setup",
+  "name": "react-library",
   "version": "1.0.0",
-  "main": "src/index.js",
-  "module": "dist/index.js",
-  "files": [ "dist" ],
+  "main": "build/component-index.js",
+  "module": "component-index.js",
   "license": "MIT",
   "scripts": {
-    "start": "webpack-dev-server --mode development",
-    "build": "webpack --mode production",
-    "module": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__"
+    "start": "webpack-dev-server --open --config webpack.dev.js",
+    "build": "webpack --open --config webpack.lib.js",
+    "lib": "rm -rf lib && NODE_ENV=production babel src/components --out-dir lib --copy-files"
   },
   "devDependencies": {
     "@babel/cli": "^7.7.5",
@@ -18,14 +17,17 @@
     "@hot-loader/react-dom": "^16.11.0",
     "autoprefixer": "^9.7.3",
     "babel-loader": "^8.0.6",
+    "chokidar": "^3.3.1",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.2.1",
     "file-loader": "^5.0.2",
+    "glob": "^7.1.6",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "image-webpack-loader": "^6.0.0",
     "mini-css-extract-plugin": "^0.8.0",
     "node-sass": "^4.13.0",
+    "optimist": "^0.6.1",
     "postcss-extend": "^1.0.5",
     "postcss-import": "^12.0.1",
     "postcss-loader": "^3.0.0",
@@ -37,14 +39,13 @@
     "prettier": "^1.19.1",
     "react-hot-loader": "^4.12.18",
     "sass-loader": "^8.0.0",
-    "style-loader": "^1.0.1",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.9.0",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "webpack-merge": "^4.2.2",
+    "webpack-node-externals": "^1.7.2"
   },
-  "peerDependencies": {
+  "dependencies": {
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
   }

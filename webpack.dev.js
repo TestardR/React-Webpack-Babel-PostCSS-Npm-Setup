@@ -1,14 +1,10 @@
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin/dist/clean-webpack-plugin");
 
 module.exports = {
   entry: ["react-hot-loader/patch", "./src/index.js"],
-  output: {
-    path: path.resolve(__dirname, "dist"),
-    filename: "[name].[hash].js"
-  },
   module: {
     rules: [
       {
@@ -99,9 +95,7 @@ module.exports = {
       template: "./public/index.html",
       filename: "./index.html"
     }),
-    new MiniCssExtractPlugin({
-      filename: "style.[contenthash].css"
-    })
+    new MiniCssExtractPlugin()
   ],
   devtool: "source-map",
   devServer: {
