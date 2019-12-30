@@ -9,6 +9,10 @@ var componentIndex = path.join("component-index.js");
 var componentIndexTmp = componentIndex + ".tmp";
 var componentsDir = path.join("src", "components");
 var componentGlob = "**/*.js";
+/**
+ * WIP: Work in Progress
+ */
+
 var prevFiles = [];
 
 function reskindex() {
